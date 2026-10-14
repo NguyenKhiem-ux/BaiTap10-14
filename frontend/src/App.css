@@ -1,0 +1,160 @@
+.app-container {
+  max-width: 720px;
+  margin: 20px auto;
+  background: white;
+}
+
+/* HEADER */
+.navbar {
+  min-height: 72px;
+}
+
+.navbar-toggler {
+  border: 4px solid #555;
+  border-radius: 12px;
+  width: 80px;
+  height: 62px;
+}
+
+/* BANNER */
+.banner {
+  height: 260px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    125deg,
+    #08adb4,
+    #78d5d6 55%,
+    #f0ffff
+  );
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 119, 139, 0.35);
+  clip-path: polygon(
+    0 0, 65% 0, 30% 70%, 75% 100%, 0 100%
+  );
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(220, 255, 255, 0.3);
+  clip-path: polygon(
+    70% 0, 100% 0, 100% 100%, 30% 100%
+  );
+}
+
+.banner-2 {
+  background: linear-gradient(120deg, #138eaa, #b5f3f2);
+}
+
+.banner-3 {
+  background: linear-gradient(120deg, #1caaa0, #b8e5ef);
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.banner-text h2 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.banner-text p {
+  font-size: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 3;
+}
+
+.carousel-indicators {
+  z-index: 3;
+}
+
+/* CONTENT */
+.table th,
+.table td {
+  padding: 8px;
+  font-size: 18px;
+}
+
+.table th:first-child {
+  width: 48%;
+}
+
+.table th:nth-child(2) {
+  width: 16%;
+}
+
+/* FOOTER */
+footer {
+  font-size: 20px;
+  color: #333;
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    margin: 0 auto;
+  }
+
+  .banner {
+    height: 240px;
+  }
+
+  .banner-text h2 {
+    font-size: 25px;
+  }
+}
+.image-banner {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.image-banner .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  text-align: center;
+  color: white;
+}
+
+.image-banner .banner-text h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.image-banner .banner-text p {
+  font-size: 20px;
+}
